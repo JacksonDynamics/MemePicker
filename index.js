@@ -1,13 +1,14 @@
-import {catsData} from "/data"
+import {catsData} from "/data.js"
+
+const emotionRadios = document.getElementById('emotion-radios')
+
 
 function getEmotionsArray(cats){
     const emotionsArray = []
-    
     for (let cat of cats){
         for (let emotion of cat.emotionTags){
             emotionsArray.push(emotion)
         }
-        
     }
     return emotionsArray
 }
@@ -21,5 +22,6 @@ function renderEmotionsRadios(cats){
     }
     emotionRadios.innerHTML = radioItems
 }
-console.log(getEmotionsArray(catsData))
+
+console.log(renderEmotionsRadios(catsData))
 

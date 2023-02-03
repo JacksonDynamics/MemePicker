@@ -1,4 +1,4 @@
-const catsData = [
+export const catsData = [
     {
         emotionTags: ["moody"],
         isGif: false,
@@ -169,4 +169,3 @@ const catsData = [
     },
 ]
 
-export default catsData
