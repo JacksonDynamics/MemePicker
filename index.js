@@ -19,7 +19,6 @@ function highlightCheckedOption(e){
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 
-
 function getMatchingCatsArray(){
     const isGif = gifsOnlyOption.checked
         console.log(isGif)
