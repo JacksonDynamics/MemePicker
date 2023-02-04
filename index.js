@@ -20,8 +20,10 @@ function highlightCheckedOption(e){
 getImage.addEventListener("click", getMatchingCatsArray)
 
 function getMatchingCatsArray(){
-    const checkedRadio = document.querySelector("input[type='radio']:checked")
-    console.log(checkedRadio.value)
+    const selectedEmotion = document.querySelector('input[type="radio"]:checked')
+    if(selectedEmotion){
+        console.log(selectedEmotion.value)
+    }
 }
 
 
