@@ -67,7 +67,6 @@ function getMatchingCatsArray(){
 }
 
 
-
 function getEmotionsArray(cats){
     const emotionsArray = []
     for (let cat of cats){
