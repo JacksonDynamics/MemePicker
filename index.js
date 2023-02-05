@@ -7,7 +7,7 @@ const gifsOnlyOption = document.getElementById('gifs-only-option')
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
-getImage.addEventListener("click", getMatchingCatsArray)
+getImage.addEventListener("click", renderCat)
 
 function highlightCheckedOption(e){
     const radioClasses = document.getElementsByClassName('radio')
@@ -28,14 +28,27 @@ function getMatchingCatsArray(){
 
         const matchingCatsArray = catsData.filter(function(cat){
             if(isGif) {
-                return cat.emotionTags.includes(selectedEmotion) && cat.isGif
+                return cat.emotionTags.includes(selectedEmotion.value) && cat.isGif
             }           
             return cat.emotionTags.includes(selectedEmotion.value)
         })
-        console.log(matchingCatsArray)
+        return matchingCatsArray
     }
 }
 
+function getSingleCatObject(){
+    
+    const catsArray = getMatchingCatsArray()
+    
+    if (catsArray.length === 1){
+        console.log(catsArray[0])
+    }
+    
+}
+
+function renderCat(){
+    getSingleCatObject() // temporary 
+}
 
 function getEmotionsArray(cats){
     const emotionsArray = []
